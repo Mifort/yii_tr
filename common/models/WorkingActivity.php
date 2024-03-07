@@ -14,6 +14,8 @@ use Yii;
  */
 class WorkingActivity extends \yii\db\ActiveRecord
 {
+    private static array $workingDay=[1,2,3,4,5];
+    private static array $weekendDay=[6,7];
     /**
      * {@inheritdoc}
      */
@@ -51,5 +53,11 @@ class WorkingActivity extends \yii\db\ActiveRecord
     public function getTranslators()
     {
         return $this->hasMany(Translators::class, ['t_wa' => 'wa_id']);
+    }
+    public static function getWorkingDay(){
+        return static::$workingDay;
+    }
+    public static function getWeekendDay(){
+        return static::$weekendDay;
     }
 }

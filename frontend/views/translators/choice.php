@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
             <?= $form->field($model, 'date')->widget(
-                DatePicker::className(), [
+                DatePicker::class, [
                 // inline too, not bad
                 'inline' => true,
                 // modify template for custom rendering

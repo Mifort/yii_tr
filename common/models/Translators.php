@@ -59,7 +59,4 @@ class Translators extends \yii\db\ActiveRecord
     {
         return $this->hasOne(WorkingActivity::class, ['wa_id' => 't_wa']);
     }
-//    public function getTypeWA() {
-//        return $this->TWa->wa_name;
-//    }
 }

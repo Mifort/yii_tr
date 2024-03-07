@@ -18,10 +18,6 @@ class TranslatorsController extends Controller
     }
     public function actionChoice()
     {
-        if(isset($_POST)){
-
-//            VarDumper::dump($_POST,10, true); die;
-        }
         $model = new DateForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $weekday = date("N",strtotime($model->date));

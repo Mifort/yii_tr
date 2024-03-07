@@ -23,7 +23,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <?= $form->field($model, 'date')->widget(
                 DatePicker::class, [
-                // inline too, not bad
                 'inline' => true,
                 // modify template for custom rendering
                 'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
